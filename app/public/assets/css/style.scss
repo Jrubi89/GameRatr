@@ -49,9 +49,11 @@ html {
                     font-family: Title;
                 }
                 .search {
+                    display: flex;
                     width: 75vw;
                     line-height: calc(10vh);
                     justify-content: center;
+                    align-items: center;
                     text-align: center;
                     input {
                         height: 30%;
@@ -64,9 +66,8 @@ html {
                         color: grey;
                     }
                     button {
-                        position: relative;
-                        bottom: 2px;
-                        right: 5px;
+                        width: 3%;
+                        font-size: 24px;
                         height: 40%;
                         border: none;
                         border-radius: 0px 3px 3px 0px;

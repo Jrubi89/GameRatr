@@ -62,11 +62,17 @@ html body .container .nav .logo {
 }
 
 html body .container .nav .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 75vw;
   line-height: calc(10vh);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
@@ -82,9 +88,8 @@ html body .container .nav .search input {
 }
 
 html body .container .nav .search button {
-  position: relative;
-  bottom: 2px;
-  right: 5px;
+  width: 3%;
+  font-size: 24px;
   height: 40%;
   border: none;
   border-radius: 0px 3px 3px 0px;
