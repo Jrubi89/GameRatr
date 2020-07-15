@@ -2,9 +2,30 @@
     font-family: Title;
     src: url(../fonts/DoHyeon-Regular.ttf);
 }
+@font-face {
+    font-family: main;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+:root {
+    --font-color: rgb(50, 50, 50);
+    --header-color: gray;
+    --sidebar-color: lightgrey;
+    --main-color: white;
+    --hover-color: darkgrey;
+}
+[data-theme="dark"] {
+    --font-color: rgb(235,235,235);
+    --header-color: rgb(35,35,35);
+    --sidebar-color: grey;
+    --main-color: darkgrey;
+    --hover-color: lightgrey;
+}
 
 html {
-    color: rgb(50, 50, 50);
+    color: var(--font-color);
+    font-family: main;
+    
     body {
         overflow-y: hidden;
         margin: 0px;
@@ -14,8 +35,9 @@ html {
             .nav {
                 height: 10vh;
                 width: 100vw;
-                background-color: gray;
+                background-color: var(--header-color);
                 display: flex;
+                transition: 0.3s;
                 .logo {
                     height: 100%;
                     width: 25vw;
@@ -33,23 +55,39 @@ html {
                     text-align: center;
                     input {
                         height: 30%;
-                        width: 70%;
-                        border-radius: 3px;
+                        width: 50%;
+                        padding: 5px 10px;
+                        border-radius: 3px 0px 0px 3px;
                         border: none;
                         font-size: 20px;
-                        font-weight: bold;
+                        background-color: var(--main-color);
+                        color: grey;
+                    }
+                    button {
+                        position: relative;
+                        bottom: 2px;
+                        right: 5px;
+                        height: 40%;
+                        border: none;
+                        border-radius: 0px 3px 3px 0px;
+                        background-color: var(--main-color);
+                        transition: 0.3s;
+                        &:hover {
+                            background-color: var(--sidebar-color);
+                        }
                     }
                 }
             }
             .main {
                 display: flex;
                 .sidebar {
-                    background-color: lightgrey;
+                    background-color: var(--sidebar-color);
                     width: 25vw;
                     height: 85vh;
                     display: flex;
                     flex-direction: column;
                     margin-right: 0;
+                    transition: 0.3s;
                     .filter {
                         width: 100%;
                         height: 70%;
@@ -61,19 +99,24 @@ html {
                             list-style-type: none;
                             padding-left: 0px;
                             li {
-                                text-align: center;
                                 text-decoration: none;
                                 font-size: 22px;
                                 .dropdown {
                                     font-size: 18px;
-                                    width: 25%;
+                                    width: 22%;
                                     display: flex;
                                     justify-content: flex-end;
-                                    margin: auto;
+                                    margin: 10px auto;
                                     background-color: inherit;
                                     border: none;
+                                    border-radius: 3px;
+                                    transition: 0.3s;
+                                    color: var(--font-color);
                                     i {
                                         margin-left: 5%;
+                                    }
+                                    &:hover{
+                                        background-color: var(--hover-color);
                                     }
                                 }
                                 .drop-content {
@@ -81,14 +124,15 @@ html {
                                 }
                                 .active {
                                     margin: auto;
-                                    margin-left: 3.8%;
                                     display: flex;
                                     flex-direction: column;
                                     width: 60%;
                                     button {
-                                        width: 100%;
+                                        margin: auto;
+                                        width: 50%;
                                         background-color: inherit;
                                         border: none;
+                                        justify-content: center;
                                         text-align: end;
                                         
                                     }
@@ -98,7 +142,7 @@ html {
                     }
                     .add-game {
                         width: 100%;
-                        height: 30%;
+                        height: 15%;
                         justify-content: center;
                         align-content: center;
                         text-align: center;
@@ -107,18 +151,60 @@ html {
                         }
                         button {
                             width: 65%;
-                            height: 15%;
+                            height: 30%;
                             border-radius: 3px;
                             font-size: 14px;
                             border: none;
-                            background-color: darkgrey;
+                            background-color: var(--hover-color);
+                            transition: 0.3s;
+                            &:hover {
+                                background-color: darkred;
+                                color: white;
+                            }
+                        }
+                    }
+                    .theme {
+                        width: 100%;
+                        height: 15%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        p {
+                            margin-right: 10%;
+                        }
+                        button {
+                            border: none;
+                            width: 20%;
+                            height: 20%;
+                        }
+                        #light {
+                            border-radius: 3px 0px 0px 3px;
+                            background-color: white;
+                            transition: 0.3s;
+                            &:hover {
+                                background-color: rgb(235,235,235);
+                                padding-right: 10px;
+                            }
+                        }
+                        #dark {
+                            border-radius: 0px 3px 3px 0px;
+                            background-color: rgb(50, 50, 50);
+                            color: white;
+                            transition: 0.3s;
+                            &:hover {
+                                background-color: rgb(85,85,85);
+                                padding-left: 10px;
+                            }
                         }
                     }
                 }
                 .cards {
+                    background-color: var(--main-color);
                     display: flex;
                     width: 75vw;
                     height: 85vh;
+                    transition: 0.3s;
                 }
             }
             footer {
@@ -128,7 +214,8 @@ html {
                 width: 100vw;
                 height: 5vh;
                 text-align: center;
-                background-color: gray;
+                background-color: var(--header-color);
+                transition: 0.3s;
                 div {
                     width: 70%;
                     height: 100%;

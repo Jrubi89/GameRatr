@@ -21,6 +21,7 @@
             </div>
             <div class="search">
                 <input type="text" placeholder="Search for a game...">
+                <button id="search" class="search-button"><i class="fa fa-search"></i></button>
             </div>
         </div>
         <div class="main">
@@ -96,6 +97,11 @@
                     <p>Is your game not listed?</p>
                     <button>Add a game!</button>
                 </div>
+                <div class="theme">
+                    <p>Select theme: </p>
+                    <button id="light" class="theme-mode">Light</button>
+                    <button id="dark" class="theme-mode">Dark</button>
+                </div>
             </div>
             <div class="cards">
                 
@@ -104,6 +110,15 @@
         <footer><div>Gamer recognizes Game</div></footer>
     </div>
     <script>
+        $('#dark').click(function() {
+            document.documentElement.setAttribute('data-theme', 'dark')
+        })
+        $('#light').click(function() {
+            document.documentElement.setAttribute('data-theme', 'light')
+        })
+
+
+
         $('#drop1').click(function() {
             $("#drop-cont1").toggleClass('active')
             $('#caret1').toggleClass('fa-caret-up')

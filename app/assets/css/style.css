@@ -3,8 +3,30 @@
   src: url(../fonts/DoHyeon-Regular.ttf);
 }
 
+@font-face {
+  font-family: main;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+
+:root {
+  --font-color: rgb(50, 50, 50);
+  --header-color: gray;
+  --sidebar-color: lightgrey;
+  --main-color: white;
+  --hover-color: darkgrey;
+}
+
+[data-theme="dark"] {
+  --font-color: rgb(235,235,235);
+  --header-color: rgb(35,35,35);
+  --sidebar-color: grey;
+  --main-color: darkgrey;
+  --hover-color: lightgrey;
+}
+
 html {
-  color: #323232;
+  color: var(--font-color);
+  font-family: main;
 }
 
 html body {
@@ -20,10 +42,12 @@ html body .container {
 html body .container .nav {
   height: 10vh;
   width: 100vw;
-  background-color: gray;
+  background-color: var(--header-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 html body .container .nav .logo {
@@ -48,11 +72,29 @@ html body .container .nav .search {
 
 html body .container .nav .search input {
   height: 30%;
-  width: 70%;
-  border-radius: 3px;
+  width: 50%;
+  padding: 5px 10px;
+  border-radius: 3px 0px 0px 3px;
   border: none;
   font-size: 20px;
-  font-weight: bold;
+  background-color: var(--main-color);
+  color: grey;
+}
+
+html body .container .nav .search button {
+  position: relative;
+  bottom: 2px;
+  right: 5px;
+  height: 40%;
+  border: none;
+  border-radius: 0px 3px 3px 0px;
+  background-color: var(--main-color);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body .container .nav .search button:hover {
+  background-color: var(--sidebar-color);
 }
 
 html body .container .main {
@@ -62,7 +104,7 @@ html body .container .main {
 }
 
 html body .container .main .sidebar {
-  background-color: lightgrey;
+  background-color: var(--sidebar-color);
   width: 25vw;
   height: 85vh;
   display: -webkit-box;
@@ -73,6 +115,8 @@ html body .container .main .sidebar {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 html body .container .main .sidebar .filter {
@@ -91,27 +135,34 @@ html body .container .main .sidebar .filter ul {
 }
 
 html body .container .main .sidebar .filter ul li {
-  text-align: center;
   text-decoration: none;
   font-size: 22px;
 }
 
 html body .container .main .sidebar .filter ul li .dropdown {
   font-size: 18px;
-  width: 25%;
+  width: 22%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin: auto;
+  margin: 10px auto;
   background-color: inherit;
   border: none;
+  border-radius: 3px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: var(--font-color);
 }
 
 html body .container .main .sidebar .filter ul li .dropdown i {
   margin-left: 5%;
+}
+
+html body .container .main .sidebar .filter ul li .dropdown:hover {
+  background-color: var(--hover-color);
 }
 
 html body .container .main .sidebar .filter ul li .drop-content {
@@ -120,7 +171,6 @@ html body .container .main .sidebar .filter ul li .drop-content {
 
 html body .container .main .sidebar .filter ul li .active {
   margin: auto;
-  margin-left: 3.8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,15 +182,19 @@ html body .container .main .sidebar .filter ul li .active {
 }
 
 html body .container .main .sidebar .filter ul li .active button {
-  width: 100%;
+  margin: auto;
+  width: 50%;
   background-color: inherit;
   border: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: end;
 }
 
 html body .container .main .sidebar .add-game {
   width: 100%;
-  height: 30%;
+  height: 15%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -155,19 +209,79 @@ html body .container .main .sidebar .add-game p {
 
 html body .container .main .sidebar .add-game button {
   width: 65%;
-  height: 15%;
+  height: 30%;
   border-radius: 3px;
   font-size: 14px;
   border: none;
-  background-color: darkgrey;
+  background-color: var(--hover-color);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body .container .main .sidebar .add-game button:hover {
+  background-color: darkred;
+  color: white;
+}
+
+html body .container .main .sidebar .theme {
+  width: 100%;
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+html body .container .main .sidebar .theme p {
+  margin-right: 10%;
+}
+
+html body .container .main .sidebar .theme button {
+  border: none;
+  width: 20%;
+  height: 20%;
+}
+
+html body .container .main .sidebar .theme #light {
+  border-radius: 3px 0px 0px 3px;
+  background-color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body .container .main .sidebar .theme #light:hover {
+  background-color: #ebebeb;
+  padding-right: 10px;
+}
+
+html body .container .main .sidebar .theme #dark {
+  border-radius: 0px 3px 3px 0px;
+  background-color: #323232;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body .container .main .sidebar .theme #dark:hover {
+  background-color: #555555;
+  padding-left: 10px;
 }
 
 html body .container .main .cards {
+  background-color: var(--main-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 75vw;
   height: 85vh;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 html body .container footer {
@@ -177,7 +291,9 @@ html body .container footer {
   width: 100vw;
   height: 5vh;
   text-align: center;
-  background-color: gray;
+  background-color: var(--header-color);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 html body .container footer div {
