@@ -39,6 +39,8 @@ html {
                 display: flex;
                 transition: 0.3s;
                 .logo {
+                    display: flex;
+                    align-items: center;
                     height: 100%;
                     width: 25vw;
                     text-align: center;
