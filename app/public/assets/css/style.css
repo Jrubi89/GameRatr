@@ -122,6 +122,7 @@ html body .container .main .sidebar {
   margin-right: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  
 }
 
 html body .container .main .sidebar .filter {
@@ -287,6 +288,7 @@ html body .container .main .cards {
   height: 85vh;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  background-image: url("../../assets/images/backgroundmaybe.png");
 }
 
 html body .container footer {
@@ -306,7 +308,7 @@ html body .container footer div {
   height: 100%;
   line-height: calc(5vh);
   margin: auto;
-  color: darkred;
+  color: #0866e0;
   font-weight: bold;
   font-family: Title;
   font-size: 18px;
