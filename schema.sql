@@ -10,7 +10,6 @@ cover_art varchar(10000),
 game_name varchar(100),
 platform varchar(50),
 genre varchar(50),
-rating dec(20),
 primary key (id)
 );
 

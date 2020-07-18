@@ -5,9 +5,13 @@ const app = express()
 
 app.use(express.static(path.join(__dirname, './app/public')))
 
+const db = require('./app/models/index')
+
 require('./app/routing/htmlRoutes')(app)
+require('./app/routing/apiRoutes')(app)
 
-app.listen(PORT, function() {
-    console.log(`Server is listening on http://localhost:${PORT}`)
+db.sequelize.sync().then(function() {
+    app.listen(PORT, function() {
+        console.log(`Listening on http://localhost:${PORT}`)
+    })
 })
-
