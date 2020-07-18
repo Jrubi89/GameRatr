@@ -84,7 +84,7 @@ html body .container .nav .search input {
   border: none;
   font-size: 20px;
   background-color: var(--main-color);
-  color: grey;
+  color: #006fff;
 }
 
 html body .container .nav .search button {
@@ -288,7 +288,7 @@ html body .container .main .cards {
   height: 85vh;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-image: url("../../assets/images/backgroundmaybe.png");
+  background-image: url("../../assets/images/background.png");
 }
 
 html body .container footer {
