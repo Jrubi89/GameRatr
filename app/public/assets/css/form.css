@@ -1,0 +1,93 @@
+:root {
+  --primary-color: #568c9b;
+  --bg-color: #333;
+  --font-color: rgb(50, 50, 50);
+  --header-color: gray;
+  --sidebar-color: lightgrey;
+  --main-color: white;
+  --hover-color: darkgrey;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Sofia;
+  font-size: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 520px;
+  padding: 2rem 2rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.error {
+  padding: 5px;
+  border: #777 dotted 1px;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn {
+  color: #fff;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  transition: all 0.7s;
+}
+
+.btn:hover {
+  background: darkred;
+  border: 1px solid var(--primary-color);
+  color: #fff;
+}
+
+.btn-reverse {
+  background: darkgray;
+  border: 1px solid var(--primary-color);
+}
+
+
+
+/* Form */
+.form-wrap {
+  margin: auto;
+  background: var(--header-color);;
+  color: #fff;
+  padding: 1.5rem 3rem 3rem;
+  margin-top: 3rem;
+  border-bottom: 4px solid var(--primary-color);
+  box-shadow: var(--box-shadow);
+}
+
+.form-wrap.reg-form,
+.form-wrap.login-form {
+  width: 60%;
+}
+
+.form-wrap h1,
+.form-wrap h2,
+.form-wrap p {
+  text-align: center;
+}
+
+.form-wrap .btn {
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+.input-box {
+  padding: 0.5rem;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  color: darblue;
+}
