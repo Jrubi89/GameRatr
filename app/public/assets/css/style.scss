@@ -68,15 +68,16 @@ html {
                         color: grey;
                     }
                     button {
-                        width: 3%;
+                        color:white;
+                        width: 10%;
                         font-size: 24px;
-                        height: 40%;
+                        height: 50%;
                         border: none;
                         border-radius: 0px 3px 3px 0px;
-                        background-color: var(--main-color);
+                        background-color: #acacac;
                         transition: 0.3s;
                         &:hover {
-                            background-color: var(--sidebar-color);
+                            background-color: #989898;
                         }
                     }
                 }
@@ -203,7 +204,7 @@ html {
                     }
                 }
                 .cards {
-                    background-image: url("/assets/images/background.png");
+                    background-image: url("../../assets/images/background.png");
                     background-color: var(--main-color);
                     display: flex;
                     width: 75vw;

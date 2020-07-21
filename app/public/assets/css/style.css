@@ -94,18 +94,19 @@ html body .container .nav .search input {
 }
 
 html body .container .nav .search button {
-  width: 3%;
+  color: white;
+  width: 10%;
   font-size: 24px;
-  height: 40%;
+  height: 50%;
   border: none;
   border-radius: 0px 3px 3px 0px;
-  background-color: var(--main-color);
+  background-color: #acacac;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 html body .container .nav .search button:hover {
-  background-color: var(--sidebar-color);
+  background-color: #989898;
 }
 
 html body .container .main {
@@ -285,7 +286,7 @@ html body .container .main .sidebar .theme #dark:hover {
 }
 
 html body .container .main .cards {
-
+  background-image: url("../../assets/images/background.png");
   background-color: var(--main-color);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,8 +295,6 @@ html body .container .main .cards {
   height: 85vh;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-image: url("../../assets/images/background.png");
-
 }
 
 html body .container footer {
