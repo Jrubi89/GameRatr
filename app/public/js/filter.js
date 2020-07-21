@@ -19,7 +19,6 @@ $(document).ready(function() {
             if (key === check) {
                 if(!checkbox[check]) {
                     checkbox[check] = true
-                    console.log(checkbox)
                 }
                 else {
                     checkbox[check] = false
@@ -34,7 +33,9 @@ $(document).ready(function() {
             }
         }
 
-        $.get(`/${JSON.stringify(params)}`).then(function(res) {
+        let filter = params.join('+')
+
+        $.get(`/filter/${filter}`, function(res) {
             console.log(res)
         })
     })
@@ -47,7 +48,18 @@ $(document).ready(function() {
             checkbox.AZ = false
             checkbox.ZA = true
         }
-        console.log(checkbox)
+        let params = []
+
+        for (let key in checkbox) {
+            if (checkbox[key]) {
+                params.push(key)
+            }
+        }
+
+        let filter = params.join('+')
+        $.get(`/filter/${filter}`, function(res) {
+            console.log(res)
+        })
     })
 
     

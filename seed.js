@@ -17,21 +17,21 @@ db.games.create({
 db.games.create({
     cover_art: 'https://images.igdb.com/igdb/image/upload/t_cover_big/co233r.jpg',
     game_name: 'Minecraft Dungeons',
-    platform: 'Xbox, PC, Playstation, Nintendo',
+    platform: 'PC, Playstation, Xbox, Nintendo',
     genre: 'RPG'
 })
 
 db.games.create({
     cover_art: 'https://images.igdb.com/igdb/image/upload/t_cover_big/co1lx6.jpg',
     game_name: 'Maneater',
-    platform: 'Xbox, PC, Playstation',
+    platform: 'PC, Playstation, Xbox',
     genre: 'RPG'
 })
 
 db.games.create({
     cover_art: 'https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.jpg',
     game_name: 'The Witcher 3: Wild Hunt',
-    platform: 'Xbox, PC, Playstation',
+    platform: 'PC, Playstation, Xbox',
     genre: 'RPG'
 })
 
@@ -52,7 +52,7 @@ db.games.create({
 db.games.create({
     cover_art: 'https://images.igdb.com/igdb/image/upload/t_cover_big/co20ul.jpg',
     game_name: 'The Binding of Isaac: Afterbirth',
-    platform: 'Xbox, PC, Playstation',
+    platform: 'PC, Playstation, Xbox',
     genre: 'Strategy'
 })
 
@@ -66,7 +66,7 @@ db.games.create({
 db.games.create({
     cover_art: 'https://images.igdb.com/igdb/image/upload/t_cover_big/co28j8.jpg',
     game_name: 'Sid Meier’s Civilization VI',
-    platform: 'Xbox, PC, Playstation, Nintendo',
+    platform: 'PC, Playstation, Xbox, Nintendo',
     genre: 'Strategy'
 })
 
@@ -80,6 +80,6 @@ db.games.create({
 db.games.create({
     cover_art: 'https://images.igdb.com/igdb/image/upload/t_cover_big/co2535.jpg',
     game_name: 'N++',
-    platform: 'Xbox, PC, Playstation',
+    platform: 'PC, Playstation, Xbox',
     genre: 'Platform'
 })
