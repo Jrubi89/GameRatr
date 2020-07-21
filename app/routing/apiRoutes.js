@@ -12,4 +12,8 @@ module.exports = function(app) {
             res.json(results)
         })
     })
+
+    app.get('/:filter', function(req, res) {
+        res.send(req.params.filter)
+    })
 }

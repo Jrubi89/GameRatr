@@ -27,3 +27,7 @@ $('#drop4').click(function() {
     $('#caret4').toggleClass('fa-caret-up')
     $('#caret4').toggleClass('fa-caret-down')
 })
+
+$('#a-z').click(function() {
+    $(this).text($(this).text() == 'Titles: A-Z' ? 'Titles: Z-A': 'Titles: A-Z')
+})
