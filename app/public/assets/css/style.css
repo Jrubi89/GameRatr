@@ -128,7 +128,6 @@ html body .container .main .sidebar {
   margin-right: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  
 }
 
 html body .container .main .sidebar .filter {
@@ -231,7 +230,7 @@ html body .container .main .sidebar .add-game button {
 }
 
 html body .container .main .sidebar .add-game button:hover {
-  background-color: darkred;
+  background-color: #006fff;
   color: white;
 }
 
@@ -286,6 +285,7 @@ html body .container .main .sidebar .theme #dark:hover {
 }
 
 html body .container .main .cards {
+
   background-color: var(--main-color);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,7 +294,8 @@ html body .container .main .cards {
   height: 85vh;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-image: url("../../assets/images/backgroundmaybe.png");
+  background-image: url("../../assets/images/background.png");
+
 }
 
 html body .container footer {
@@ -314,7 +315,7 @@ html body .container footer div {
   height: 100%;
   line-height: calc(5vh);
   margin: auto;
-  color: #0866e0;
+  color: darkred;
   font-weight: bold;
   font-family: Title;
   font-size: 18px;

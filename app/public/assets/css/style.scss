@@ -161,7 +161,7 @@ html {
                             background-color: var(--hover-color);
                             transition: 0.3s;
                             &:hover {
-                                background-color: darkred;
+                                background-color: #006fff;
                                 color: white;
                             }
                         }
@@ -203,6 +203,7 @@ html {
                     }
                 }
                 .cards {
+                    background-image: url("/assets/images/background.png");
                     background-color: var(--main-color);
                     display: flex;
                     width: 75vw;
