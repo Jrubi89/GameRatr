@@ -6,6 +6,10 @@ $('#light').click(function() {
 })
 
 
+$('#add-game').click(function() {
+    $('#myForm').css('display', 'block')
+})
+
 
 $('#drop1').click(function() {
     $("#drop-cont1").toggleClass('active')

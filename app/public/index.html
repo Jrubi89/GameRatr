@@ -76,15 +76,16 @@
 
                 <div class="add-game">
                     <p>Is your game not listed?</p>
-                <button onclick="openForm()">Add a game!</button>
+                <button id="add-game">Add a game!</button>
                 
 <div class=  "form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
   <section id="add" class="container1">
     <div class="form-wrap">
+        <button id="close-form">X</button>
         <h2>Add a Game</h2>
        
-        <form action="/Game/add" method="POST">
+        <form action="/add/game" method="POST">
 
              <div class="input-group">
                 <label for="title">Image</label>
@@ -124,17 +125,6 @@
     </div>
  </div>
 </section>
-
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
-
                 </div>
                 <div class="theme">
                     <p>Select theme: </p>
