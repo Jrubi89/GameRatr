@@ -1,6 +1,7 @@
 let db = require('../models/')
 
 module.exports = function(app) {
+
     app.get('/api/games', function(req, res) {
         db.games.findAll({}).then(function(results) {
             res.json(results)
@@ -29,18 +30,39 @@ module.exports = function(app) {
         }
 
         if (filters[filters.length - 1] === 'AZ') {
-            db.games.findAll({order: ['game_name'],
+            filter(req, res, platform, genre, 'ASC')
+        } else {
+            filter(req, res, platform, genre, 'DESC')
+        }
+    })
+
+    app.post('/add/game', function(req, res) {
+        res.send(req.body)
+    })
+}
+
+function filter(req, res, platform, genre, order) {
+    if(platform.length > 0) {
+        db.games.findAll({order: [['game_name', order]],
+                              where: {platform: {[db.Sequelize.Op.like]: `%${[platform.join(', ')]}%`}}               
+                        })
+        .then(function(results) {
+            res.json(results)
+        })
+    } else if (genre.length > 0) {
+        db.games.findAll({order: [['game_name', order]],
+                              where: {genre: [genre]}               
+                            })
+        .then(function(results) {
+            res.send(results)
+        })
+    } else if(platform.length && genre.length > 0) {
+        db.games.findAll({order: [['game_name', order]],
                               where: {platform: {[db.Sequelize.Op.like]: `%${[platform.join(', ')]}%`},
                                       genre: [genre]}               
                             })
-            .then(function(results) {
-                res.json(results)  
-            })
- 
-        } else {
-            db.games.findAll({order: [['game_name', 'DESC']]}).then(function(results) {
-                res.json(results)
-            })
-        }
-    })
+        .then(function(results) {
+            res.json(results)
+        })
+    }
 }

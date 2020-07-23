@@ -235,7 +235,8 @@ html body .container .main .sidebar .add-game button:hover {
   color: white;
 }
 
-html body .container .main .sidebar .theme {
+html body .container .main .sidebar .form-pop
+.theme {
   width: 100%;
   height: 15%;
   display: -webkit-box;
@@ -250,29 +251,34 @@ html body .container .main .sidebar .theme {
   text-align: center;
 }
 
-html body .container .main .sidebar .theme p {
+html body .container .main .sidebar .form-pop
+.theme p {
   margin-right: 10%;
 }
 
-html body .container .main .sidebar .theme button {
+html body .container .main .sidebar .form-pop
+.theme button {
   border: none;
   width: 20%;
   height: 20%;
 }
 
-html body .container .main .sidebar .theme #light {
+html body .container .main .sidebar .form-pop
+.theme #light {
   border-radius: 3px 0px 0px 3px;
   background-color: white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-html body .container .main .sidebar .theme #light:hover {
+html body .container .main .sidebar .form-pop
+.theme #light:hover {
   background-color: #ebebeb;
   padding-right: 10px;
 }
 
-html body .container .main .sidebar .theme #dark {
+html body .container .main .sidebar .form-pop
+.theme #dark {
   border-radius: 0px 3px 3px 0px;
   background-color: #323232;
   color: white;
@@ -280,7 +286,8 @@ html body .container .main .sidebar .theme #dark {
   transition: 0.3s;
 }
 
-html body .container .main .sidebar .theme #dark:hover {
+html body .container .main .sidebar .form-pop
+.theme #dark:hover {
   background-color: #555555;
   padding-left: 10px;
 }

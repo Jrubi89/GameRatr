@@ -72,9 +72,59 @@
                         </li>
                     </ul>
                 </div>
+           
+
                 <div class="add-game">
                     <p>Is your game not listed?</p>
-                  <button>Add a game!</button>
+                <button id="add-game">Add a game!</button>
+                
+<div class=  "form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+  <section id="add" class="container1">
+    <div class="form-wrap">
+        <button id="close-form">X</button>
+        <h2>Add a Game</h2>
+       
+        <form action="/add/game" method="POST">
+
+             <div class="input-group">
+                <label for="title">Image</label>
+                <input type="text" id="photo" class="input-box"
+                 placeholder="URL Link here"maxlength="100" required>
+            </div>
+
+            <div class="input-group">
+                <label for="title">Game Title</label>
+                <input type="text" name="Game" id="Game" class="input-box"
+                    placeholder="eg. Fortnite, Minecraft, Grand Theft Auto" maxlength="100" required>
+            </div>
+            <div class="input-group">
+                <label for="Platform">Platform</label>
+                <input type="text" name="Platform" id="Platform" class="input-box"
+                    placeholder="eg. PC, Playstation, Xbox" maxlength="100" required>
+            </div>
+            <div class="input-group">
+                <label for="genre"> genre (Leave blank for unknown)</label>
+                <input type="text" name="Genre" id="genre" class="input-box" 
+                placeholder="eg. RPG, Strategy, Shooter" maxlength="100"required>
+            </div>
+            <div class="input-group">
+                <label for="description">Game Description</label>
+                </br>
+                <textarea name="description" id="description" class="input-box"
+            
+                    placeholder="Describe the details of the game" rows="5"></textarea>
+            </div>
+             <div class="input-group">
+                <label for="Raiting">Raiting</label>
+                <input type="number" name="Raiting" id="budget" class="input-box" placeholder="1-10"required>
+            </div>
+            
+            <input type="submit" value="Add Game" class="btn btn-reverse">
+        </form>
+    </div>
+ </div>
+</section>
                 </div>
                 <div class="theme">
                     <p>Select theme: </p>
