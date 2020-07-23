@@ -327,3 +327,79 @@ html body .container footer div {
   font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 500px;
+
+
+}
+
+.div {
+    text-align: left;
+
+}
+
+ .input-box {
+  padding: 0.5rem;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  text-align: left;
+ }
+ .input-group {
+    text-align: left;
+
+}
+
+
+.container1 {
+  max-width: 320px;
+  max-height: 700px;
+  padding: 3rem 2rem;
+  margin-bottom: .2rem;
+  font-family: Sofia;
+  font-size: 18px;
+  background: lightgrey;
+  color: block;
+  padding: 1.5rem 3rem 3rem;
+  border-bottom: 4px solid var(--primary-color);
+  box-shadow: var(--box-shadow);
+
+}
+
+.btn {
+  color: black;
+  background: var(--hover-color);
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  transition: all 0.7s;
+}
+
+.btn:hover {
+  background: darkred;
+  border: 1px solid var(--hover-color);
+  color: #fff;
+}
+
+.form-wrap  {
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+
+} 
+.hero__video {
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+.results-modal1{
+  position: fixed
+}
