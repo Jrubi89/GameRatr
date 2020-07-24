@@ -12,6 +12,7 @@
   --font-color: rgb(50, 50, 50);
   --header-color: gray;
   --sidebar-color: lightgrey;
+  --card-color: rgba(77, 77, 77, 0.6);
   --main-color: white;
   --hover-color: darkgrey;
 }
@@ -20,6 +21,7 @@
   --font-color: rgb(235,235,235);
   --header-color: rgb(35,35,35);
   --sidebar-color: grey;
+  --card-color: rgba(77, 77, 77, 0.6);
   --main-color: darkgrey;
   --hover-color: lightgrey;
 }
@@ -235,8 +237,7 @@ html body .container .main .sidebar .add-game button:hover {
   color: white;
 }
 
-html body .container .main .sidebar .form-pop
-.theme {
+html body .container .main .sidebar .theme {
   width: 100%;
   height: 15%;
   display: -webkit-box;
@@ -251,34 +252,29 @@ html body .container .main .sidebar .form-pop
   text-align: center;
 }
 
-html body .container .main .sidebar .form-pop
-.theme p {
+html body .container .main .sidebar .theme p {
   margin-right: 10%;
 }
 
-html body .container .main .sidebar .form-pop
-.theme button {
+html body .container .main .sidebar .theme button {
   border: none;
   width: 20%;
   height: 20%;
 }
 
-html body .container .main .sidebar .form-pop
-.theme #light {
+html body .container .main .sidebar .theme #light {
   border-radius: 3px 0px 0px 3px;
   background-color: white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-html body .container .main .sidebar .form-pop
-.theme #light:hover {
+html body .container .main .sidebar .theme #light:hover {
   background-color: #ebebeb;
   padding-right: 10px;
 }
 
-html body .container .main .sidebar .form-pop
-.theme #dark {
+html body .container .main .sidebar .theme #dark {
   border-radius: 0px 3px 3px 0px;
   background-color: #323232;
   color: white;
@@ -286,8 +282,7 @@ html body .container .main .sidebar .form-pop
   transition: 0.3s;
 }
 
-html body .container .main .sidebar .form-pop
-.theme #dark:hover {
+html body .container .main .sidebar .theme #dark:hover {
   background-color: #555555;
   padding-left: 10px;
 }
@@ -295,13 +290,53 @@ html body .container .main .sidebar .form-pop
 html body .container .main .cards {
   background-image: url("../../assets/images/background.png");
   background-color: var(--main-color);
+  overflow-y: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 75vw;
   height: 85vh;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+html body .container .main .cards div {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--card-color);
+  color: white;
+  border-radius: 5px;
+  width: 25%;
+  height: 45%;
+  margin: 2% auto;
+  padding: 2%;
+}
+
+html body .container .main .cards div img {
+  width: 80%;
+  height: 70%;
+}
+
+html body .container .main .cards div h1 {
+  font-size: 18px;
+}
+
+html body .container .main .cards div p {
+  font-size: 14px;
 }
 
 html body .container footer {
@@ -327,79 +362,3 @@ html body .container footer div {
   font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */
-
-
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 500px;
-
-
-}
-
-.div {
-    text-align: left;
-
-}
-
- .input-box {
-  padding: 0.5rem;
-  font-size: 14px;
-  width: 100%;
-  margin-bottom: 1.2rem;
-  text-align: left;
- }
- .input-group {
-    text-align: left;
-
-}
-
-
-.container1 {
-  max-width: 320px;
-  max-height: 700px;
-  padding: 3rem 2rem;
-  margin-bottom: .2rem;
-  font-family: Sofia;
-  font-size: 18px;
-  background: lightgrey;
-  color: block;
-  padding: 1.5rem 3rem 3rem;
-  border-bottom: 4px solid var(--primary-color);
-  box-shadow: var(--box-shadow);
-
-}
-
-.btn {
-  color: black;
-  background: var(--hover-color);
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  transition: all 0.7s;
-}
-
-.btn:hover {
-  background: darkred;
-  border: 1px solid var(--hover-color);
-  color: #fff;
-}
-
-.form-wrap  {
-  margin-top: 1rem;
-  display: block;
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
-
-} 
-.hero__video {
-    border-radius: 40px;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-}
-.results-modal1{
-  position: fixed
-}

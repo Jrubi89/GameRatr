@@ -3,7 +3,7 @@ let db = require('../models/')
 module.exports = function(app) {
 
     app.get('/api/games', function(req, res) {
-        db.games.findAll({}).then(function(results) {
+        db.games.findAll({ order: [['game_name']]}).then(function(results) {
             res.json(results)
         })
     })
@@ -42,23 +42,29 @@ module.exports = function(app) {
 }
 
 function filter(req, res, platform, genre, order) {
-    if(platform.length > 0) {
+    if(platform.length === 0 && genre.length === 0) {
+        db.games.findAll({order: [['game_name', order]]})
+        .then(function(results) {
+            res.json(results)
+        })
+    } else if(platform.length > 0 && genre.length === 0) {
         db.games.findAll({order: [['game_name', order]],
-                              where: {platform: {[db.Sequelize.Op.like]: `%${[platform.join(', ')]}%`}}               
+                              where: {platform: [platform]}               
                         })
         .then(function(results) {
             res.json(results)
         })
-    } else if (genre.length > 0) {
+    } else if (genre.length > 0 && platform.length === 0) {
         db.games.findAll({order: [['game_name', order]],
                               where: {genre: [genre]}               
                             })
         .then(function(results) {
-            res.send(results)
+            res.json(results)
         })
-    } else if(platform.length && genre.length > 0) {
+    } else {
+        console.log('both')
         db.games.findAll({order: [['game_name', order]],
-                              where: {platform: {[db.Sequelize.Op.like]: `%${[platform.join(', ')]}%`},
+                              where: {platform: [platform],
                                       genre: [genre]}               
                             })
         .then(function(results) {

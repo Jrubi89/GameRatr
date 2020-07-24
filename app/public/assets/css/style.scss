@@ -11,6 +11,7 @@
     --font-color: rgb(50, 50, 50);
     --header-color: gray;
     --sidebar-color: lightgrey;
+    --card-color: rgba(77, 77, 77, 0.6);
     --main-color: white;
     --hover-color: darkgrey;
 }
@@ -18,6 +19,7 @@
     --font-color: rgb(235,235,235);
     --header-color: rgb(35,35,35);
     --sidebar-color: grey;
+    --card-color: rgba(77, 77, 77, 0.6);
     --main-color: darkgrey;
     --hover-color: lightgrey;
 }
@@ -206,10 +208,36 @@ html {
                 .cards {
                     background-image: url("../../assets/images/background.png");
                     background-color: var(--main-color);
+                    overflow-y: scroll;
                     display: flex;
+                    flex-direction: row;
+                    flex: 0 0 auto;
+                    flex-wrap: wrap;
                     width: 75vw;
                     height: 85vh;
                     transition: 0.3s;
+                    div {
+                        justify-content: center;
+                        text-align: center;
+                        align-items: center;
+                        background-color: var(--card-color);
+                        color: white;
+                        border-radius: 5px;
+                        width: 25%;
+                        height: 45%;
+                        margin: 2% auto;
+                        padding: 2%;
+                        img {
+                            width: 80%;
+                            height: 70%;
+                        }
+                        h1 {
+                            font-size: 18px;
+                        }
+                        p{
+                            font-size: 14px;
+                        }
+                    }
                 }
             }
             footer {
