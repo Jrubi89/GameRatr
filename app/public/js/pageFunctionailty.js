@@ -5,6 +5,9 @@ $('#light').click(function() {
     document.documentElement.setAttribute('data-theme', 'light')
 })
 
+$('#close').click(function() {
+    $('.form-popup').css('display', 'none')
+})
 
 $('#add-game').click(function() {
     $('#myForm').css('display', 'block')

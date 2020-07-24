@@ -13,7 +13,7 @@
     --sidebar-color: lightgrey;
     --card-color: rgba(77, 77, 77, 0.6);
     --main-color: white;
-    --hover-color: darkgrey;
+    --hover-color: #006fff;
 }
 [data-theme="dark"] {
     --font-color: rgb(235,235,235);
@@ -21,7 +21,7 @@
     --sidebar-color: grey;
     --card-color: rgba(77, 77, 77, 0.6);
     --main-color: darkgrey;
-    --hover-color: lightgrey;
+    --hover-color: #006fff;
 }
 
 html {
@@ -161,11 +161,67 @@ html {
                             border-radius: 3px;
                             font-size: 14px;
                             border: none;
-                            background-color: var(--hover-color);
+                            background-color: var(--header-color);
+                            color: var(--font-color);
                             transition: 0.3s;
                             &:hover {
-                                background-color: #006fff;
+                                background-color: var(--hover-color);
                                 color: white;
+                            }
+                        }
+                        .form-popup {
+                            position: absolute;
+                            bottom: 25vh;
+                            left: 25vw;
+                            background-color: var(--header-color);
+                            border-radius: 0px 5px 0px 0px;
+                            height: 50vh;
+                            width: 25vw;
+                            display: none;
+                            .form-container {
+                                position: relative;
+                                bottom: 4%;
+                                height: 100%;
+                                padding-top: 20%;
+                                .container1 {
+                                    height: 100%;
+                                    .form-wrap {
+                                        height: 100%;
+                                        h1 {
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            width: 10%;
+                                            height: 7%;
+                                            line-height: 170%;
+                                            border-top-right-radius: 5px;
+                                            transition: 0.3s;
+                                            &:hover {
+                                                font-weight: bolder;
+                                                background-color: var(--hover-color);
+                                                color: var(--font-color);
+                                            }
+                                        }
+                                        input {
+                                            width: 75%;
+                                            margin-bottom: 3%;
+                                        }
+                                        .btn {
+                                            background-color: var(--sidebar-color);
+                                            border-radius: 3px;
+                                            border: none;
+                                            margin-top: 10%;
+                                            width: 50%;
+                                            height: 30px;
+                                            margin-bottom: 0px;
+                                            transition: 0.3s;
+                                            &:hover {
+                                                background-color: var(--hover-color);
+                                                color: var(--font-color);
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

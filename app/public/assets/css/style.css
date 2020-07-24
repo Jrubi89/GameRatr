@@ -14,7 +14,7 @@
   --sidebar-color: lightgrey;
   --card-color: rgba(77, 77, 77, 0.6);
   --main-color: white;
-  --hover-color: darkgrey;
+  --hover-color: #006fff;
 }
 
 [data-theme="dark"] {
@@ -23,7 +23,7 @@
   --sidebar-color: grey;
   --card-color: rgba(77, 77, 77, 0.6);
   --main-color: darkgrey;
-  --hover-color: lightgrey;
+  --hover-color: #006fff;
 }
 
 html {
@@ -227,14 +227,81 @@ html body .container .main .sidebar .add-game button {
   border-radius: 3px;
   font-size: 14px;
   border: none;
-  background-color: var(--hover-color);
+  background-color: var(--header-color);
+  color: var(--font-color);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 html body .container .main .sidebar .add-game button:hover {
-  background-color: #006fff;
+  background-color: var(--hover-color);
   color: white;
+}
+
+html body .container .main .sidebar .add-game .form-popup {
+  position: absolute;
+  bottom: 25vh;
+  left: 25vw;
+  background-color: var(--header-color);
+  border-radius: 0px 5px 0px 0px;
+  height: 50vh;
+  width: 25vw;
+  display: none;
+}
+
+html body .container .main .sidebar .add-game .form-popup .form-container {
+  position: relative;
+  bottom: 4%;
+  height: 100%;
+  padding-top: 20%;
+}
+
+html body .container .main .sidebar .add-game .form-popup .form-container .container1 {
+  height: 100%;
+}
+
+html body .container .main .sidebar .add-game .form-popup .form-container .container1 .form-wrap {
+  height: 100%;
+}
+
+html body .container .main .sidebar .add-game .form-popup .form-container .container1 .form-wrap h1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 7%;
+  line-height: 170%;
+  border-top-right-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body .container .main .sidebar .add-game .form-popup .form-container .container1 .form-wrap h1:hover {
+  font-weight: bolder;
+  background-color: var(--hover-color);
+  color: var(--font-color);
+}
+
+html body .container .main .sidebar .add-game .form-popup .form-container .container1 .form-wrap input {
+  width: 75%;
+  margin-bottom: 3%;
+}
+
+html body .container .main .sidebar .add-game .form-popup .form-container .container1 .form-wrap .btn {
+  background-color: var(--sidebar-color);
+  border-radius: 3px;
+  border: none;
+  margin-top: 10%;
+  width: 50%;
+  height: 30px;
+  margin-bottom: 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body .container .main .sidebar .add-game .form-popup .form-container .container1 .form-wrap .btn:hover {
+  background-color: var(--hover-color);
+  color: var(--font-color);
 }
 
 html body .container .main .sidebar .theme {
