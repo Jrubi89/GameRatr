@@ -14,7 +14,7 @@ const db = require('./app/models/index')
 require('./app/routing/htmlRoutes')(app)
 require('./app/routing/apiRoutes')(app)
 
-db.sequelize.sync({}).then(function() {
+db.sequelize.sync({{force: true}}).then(function() {
     app.listen(PORT, function() {
         console.log(`Listening on http://localhost:${PORT}`)
     })
