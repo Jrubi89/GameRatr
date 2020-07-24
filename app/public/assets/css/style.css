@@ -97,9 +97,9 @@ html body .container .nav .search input {
 
 html body .container .nav .search button {
   color: white;
-  width: 10%;
+  width: 5%;
   font-size: 24px;
-  height: 50%;
+  height: 40%;
   border: none;
   border-radius: 0px 3px 3px 0px;
   background-color: #acacac;
@@ -108,7 +108,7 @@ html body .container .nav .search button {
 }
 
 html body .container .nav .search button:hover {
-  background-color: #989898;
+  background-color: var(--hover-color);
 }
 
 html body .container .main {
@@ -155,7 +155,7 @@ html body .container .main .sidebar .filter ul li {
 
 html body .container .main .sidebar .filter ul li .dropdown {
   font-size: 18px;
-  width: 22%;
+  width: 28%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,7 +176,8 @@ html body .container .main .sidebar .filter ul li .dropdown i {
 }
 
 html body .container .main .sidebar .filter ul li .dropdown:hover {
-  background-color: var(--hover-color);
+  background-color: var(--header-color);
+  color: var(--font-color);
 }
 
 html body .container .main .sidebar .filter ul li .drop-content {
@@ -240,24 +241,43 @@ html body .container .main .sidebar .add-game button:hover {
 
 html body .container .main .sidebar .add-game .form-popup {
   position: absolute;
-  bottom: 25vh;
+  bottom: 10vh;
   left: 25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: var(--header-color);
   border-radius: 0px 5px 0px 0px;
-  height: 50vh;
+  height: 65%;
   width: 25vw;
   display: none;
 }
 
 html body .container .main .sidebar .add-game .form-popup .form-container {
-  position: relative;
-  bottom: 4%;
   height: 100%;
-  padding-top: 20%;
+  width: 100%;
+  padding: 20% initial initial 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 html body .container .main .sidebar .add-game .form-popup .form-container .container1 {
   height: 100%;
+  width: 100%;
 }
 
 html body .container .main .sidebar .add-game .form-popup .form-container .container1 .form-wrap {
@@ -269,8 +289,10 @@ html body .container .main .sidebar .add-game .form-popup .form-container .conta
   top: 0;
   right: 0;
   width: 10%;
-  height: 7%;
-  line-height: 170%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
   border-top-right-radius: 5px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -283,8 +305,30 @@ html body .container .main .sidebar .add-game .form-popup .form-container .conta
 }
 
 html body .container .main .sidebar .add-game .form-popup .form-container .container1 .form-wrap input {
-  width: 75%;
+  width: 70%;
   margin-bottom: 3%;
+}
+
+html body .container .main .sidebar .add-game .form-popup .form-container .container1 .form-wrap .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10%;
+}
+
+html body .container .main .sidebar .add-game .form-popup .form-container .container1 .form-wrap .check div {
+  width: 60%;
+  text-align: end;
+}
+
+html body .container .main .sidebar .add-game .form-popup .form-container .container1 .form-wrap .check div input {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 html body .container .main .sidebar .add-game .form-popup .form-container .container1 .form-wrap .btn {
@@ -292,7 +336,7 @@ html body .container .main .sidebar .add-game .form-popup .form-container .conta
   border-radius: 3px;
   border: none;
   margin-top: 10%;
-  width: 50%;
+  width: 80%;
   height: 30px;
   margin-bottom: 0px;
   -webkit-transition: 0.3s;
@@ -421,6 +465,15 @@ html body .container footer {
 html body .container footer div {
   width: 70%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   line-height: calc(5vh);
   margin: auto;
   color: darkred;

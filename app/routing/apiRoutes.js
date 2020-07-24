@@ -37,7 +37,15 @@ module.exports = function(app) {
     })
 
     app.post('/add/game', function(req, res) {
-        res.send(req.body)
+        for (let i = 0; i < req.body.platform.length; i++) {
+            db.games.create({
+                cover_art: req.body.cover_art,
+                game_name: req.body.game_name,
+                platform: req.body.platform[i],
+                genre: req.body.genre
+            })
+        }
+        res.send('Game added')
     })
 }
 

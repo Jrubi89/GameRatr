@@ -12,7 +12,7 @@ $(document).ready(function() {
         ZA: false
     }
 
-    $(':checkbox').click(function() {
+    $('button :checkbox').click(function() {
         let check = $(this).val()
 
         for (let key in checkbox) {

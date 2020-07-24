@@ -26,7 +26,7 @@
             </div>
             <div class="search">
                 <input id="search-bar" type="text" placeholder="Search for a game...">
-                <button id="search" class="search-button">Search</button>
+                <button id="search" class="fa fa-search"></button>
             </div>
         </div>
         <div class="main">
@@ -78,19 +78,19 @@
                                  <button onclick="openForm()">Add a game!</button>
 
 <div class=  "form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
+  <div class="form-container">
   <section id="add" class="container1">
     <div class="form-wrap">
         <h2>Add a Game</h2>
         <h1 id="close">X</h1>
 
-        <form action="/add/game" method="POST">
+        <div>
 
              <div class="input-group">
                 <label for="title">Image:</label>
                 <br>
                 <input type="text" id="photo" class="input-box"
-                 placeholder="URL Link here"maxlength="100" required>
+                 placeholder="URL Link here">
             </div>
 
             <div class="input-group">
@@ -99,23 +99,54 @@
                 <input type="text" name="Game" id="Game" class="input-box"
                     placeholder="eg. Fortnite, Minecraft, Grand Theft Auto" maxlength="100" required>
             </div>
-            <div class="input-group">
-                <label for="Platform">Platform:</label>
+            <div class="input-group check">
+                <label for="Platform">Platform(s):</label>
                 <br>
-                <input type="text" name="Platform" id="Platform" class="input-box"
-                    placeholder="eg. PC, Playstation, Xbox" maxlength="100" required>
+                <div>
+                    <label for="PC">PC</label>
+                    <input type="checkbox" name="PC" value="PC" id="PC" class="Platform">
+                </div>
+                <div>
+                    <label for="Playstation">Playstation</label>
+                    <input type="checkbox" name="Playstation" value="Playstation"id="Playstation" class="Platform">
+                </div>
+                <div>
+                    <label for="Xbox">Xbox</label>
+                    <input type="checkbox" name="Xbox" value="Xbox"id="Xbox" class="Platform">
+                </div>
+                <div>
+                    <label for="Nintendo">Nintendo</label>
+                    <input type="checkbox" name="Nintendo" value="Nintendo" id="Nintendo" class="Platform">
+                </div>
             </div>
-            <div class="input-group">
+            <div class="input-group check">
                 <label for="genre"> Genre:</label>
                 <br>
-                <input type="text" name="Genre" id="genre" class="input-box" 
-                placeholder="eg. RPG, Strategy, Shooter" maxlength="100"required>
+                <div>
+                    <label for="RPG">RPG</label>
+                    <input type="radio" name="genre" value="RPG">
+                </div>
+                <div>
+                    <label for="Shooter">Shooter</label>
+                    <input type="radio" name="genre" value="Shooter">
+                </div>
+                <div>
+                    <label for="Platform">Platform</label>
+                    <input type="radio" name="genre" value="Platform">
+                </div>
+                <div>
+                    <label for="Strategy">Strategy</label>
+                    <input type="radio" name="genre" value="Strategy">
+                </div>
             </div>
-            <input type="submit" value="Add Game" class="btn btn-reverse">
-        </form>
+            <div id="error"></div>
+            <button id="submit" class="btn btn-reverse">Add Game</button>
+        </div>
     </div>
- </div>
 </section>
+</div>
+</div>
+
 
 <script>
 function openForm() {
@@ -137,10 +168,11 @@ function closeForm() {
             
             </div>
         </div>
-        <footer><img src="assets/images/footer.png" /></footer>
+        <footer><div><img src="assets/images/footer.png"></div></footer>
     </div>
     <script src="./js/pageFunctionailty.js"></script>
     <script src="./js/search.js"></script>
     <script src="./js/filter.js"></script>
+    <script src='./js/addGame.js'></script>
 </body>
 </html>
