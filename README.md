@@ -8,3 +8,5 @@ The goal of this project was to make a Full-Stack Application using everything t
 ## Sounds great! How do I use this app?
 All you have to do is visit <a href="https://eclipse.thelaclair.com" target="_blank">Eclipse</a>. If you would like to run this application or make changes locally,
 clone the repository and run npm install and you are all set!
+## Screenshot
+<img src="./app/public/assets/images/GameRatrSS.png" alt="GameRatrSS">
